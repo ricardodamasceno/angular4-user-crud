@@ -1,0 +1,22 @@
+{
+  "name": "angular4-user-crud",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ricardo Damasceno"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ricardodamasceno/angular4-user-crud",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1"
+  }
+}
