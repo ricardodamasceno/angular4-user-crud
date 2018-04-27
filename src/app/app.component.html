@@ -1,5 +1,18 @@
 <div>
-  <button type="button" class="btn btn-primary" (click)="createUser()">Crete User</button>
-  <button type="button" class="btn btn-primary" (click)="listUser()">List User</button>
-  <router-outlet></router-outlet>
+  <div>
+    <nav ngClass="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul ngClass="navbar-nav">
+        <li ngClass="nav-item">
+          <a ngClass="nav-link item-link" (click)="createUser()"> Create User </a>
+        </li>
+        <li ngClass="nav-item">
+          <a ngClass="nav-link item-link" (click)="listUser()">List Users</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div ngClass="col-6 mx-auto pt-5 pl-0">
+    <router-outlet></router-outlet>
+  </div>
 </div>
