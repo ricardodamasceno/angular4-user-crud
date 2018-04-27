@@ -1,22 +1,39 @@
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
+import {ListUsersComponent} from './list-users/list-users.component';
+import {AddUserComponent} from './add-user/add-user.component';
+
+const appRoutes: Routes = [
+  {path: 'add-user', component: AddUserComponent},
+  {path: 'list-users', component: ListUsersComponent},
+  {path: 'home', component: ListUsersComponent},
+  {path: '**', component: ListUsersComponent}
+];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListUsersComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing: false} // <-- debugging purposes only
+    )
   ],
   providers: [
     HttpClientModule
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

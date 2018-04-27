@@ -1,18 +1,5 @@
-<div class="col-6 mx-auto pt-5">
-  <form>
-    <div class="form-group">
-      <label for="username">User Name</label>
-      <input [(ngModel)]="name" name="name" type="text" class="form-control" id="username" placeholder="Name">
-    </div>
-    <div class="form-group">
-      <label for="lastName">Last Name</label>
-      <input [(ngModel)]="lastName" name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
-    </div>
-    <div class="form-group">
-      <label for="birthDate">Birth Date</label>
-      <input [(ngModel)]="birthDate" name="birthDate" type="date" class="form-control" id="birthDate">
-    </div>
-    <button type="button" class="btn btn-primary" (click)="saveUser()">Save</button>
-  </form>
+<div>
+  <button type="button" class="btn btn-primary" (click)="createUser()">Crete User</button>
+  <button type="button" class="btn btn-primary" (click)="listUser()">List User</button>
+  <router-outlet></router-outlet>
 </div>
-

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,31 +8,15 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AppComponent {
 
-  baseUrl = 'http://localhost:8080/rest/v1/user';
-  name = '';
-  lastName = '';
-  birthDate = undefined;
-
-  constructor(private http: HttpClient) {
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
 
-  resetForm(): void {
-    this.name = '';
-    this.lastName = '';
-    this.birthDate = '';
+  createUser(): void {
+    this.router.navigate(['add-user'], {relativeTo: this.route});
   }
 
-  saveUser(): void {
-    const user = {
-      name: this.name,
-      lastName: this.lastName,
-      birthDate: this.birthDate
-    };
-
-    this.http.post(this.baseUrl, user).subscribe(
-      (data: any) => {
-        this.resetForm();
-      }
-    );
+  listUser(): void {
+    this.router.navigate(['list-user'], {relativeTo: this.route});
   }
+
 }

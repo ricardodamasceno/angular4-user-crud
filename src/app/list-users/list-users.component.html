@@ -1,0 +1,25 @@
+<div class="col-6 mx-auto pt-5">
+
+  <h1> Users registered on database </h1>
+
+  <table ngClass="table mt-5">
+    <thead>
+      <td>
+        <strong>Name</strong>
+      </td>
+      <td>
+        <strong>Last Name</strong>
+      </td>
+      <td>
+        <strong>Birthday</strong>
+      </td>
+    </thead>
+    <tbody *ngFor="let user of users">
+      <tr>
+        <td>{{user.name}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.birthDay}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
