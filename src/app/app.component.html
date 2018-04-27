@@ -1,21 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="col-6 mx-auto pt-5">
   <form>
     <div class="form-group">
       <label for="username">User Name</label>
-      <input type="text" class="form-control" id="username" placeholder="Name">
+      <input [(ngModel)]="name" name="name" type="text" class="form-control" id="username" placeholder="Name">
     </div>
     <div class="form-group">
       <label for="lastName">Last Name</label>
-      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+      <input [(ngModel)]="lastName" name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
     </div>
     <div class="form-group">
       <label for="birthDate">Birth Date</label>
-      <input type="date" class="form-control" id="birthDate">
+      <input [(ngModel)]="birthDate" name="birthDate" type="date" class="form-control" id="birthDate">
     </div>
-
-    <button type="button" class="btn btn-primary">Save</button>
-
+    <button type="button" class="btn btn-primary" (click)="saveUser()">Save</button>
   </form>
 </div>
 
