@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {ListUsersComponent} from './list-users/list-users.component';
 import {AddUserComponent} from './add-user/add-user.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const appRoutes: Routes = [
   {path: 'add-user', component: AddUserComponent},
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListUsersComponent,
-    AddUserComponent
+    AddUserComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

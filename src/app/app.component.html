@@ -1,17 +1,5 @@
 <div>
-  <div>
-    <nav ngClass="navbar navbar-expand-sm bg-dark navbar-dark">
-      <ul ngClass="navbar-nav">
-        <li ngClass="nav-item">
-          <a ngClass="nav-link item-link" (click)="createUser()"> Create User </a>
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link item-link" (click)="listUser()">List Users</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
+  <app-nav-bar></app-nav-bar>
   <div ngClass="col-6 mx-auto pt-5 pl-0">
     <router-outlet></router-outlet>
   </div>
