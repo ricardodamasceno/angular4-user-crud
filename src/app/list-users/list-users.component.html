@@ -11,12 +11,19 @@
       <td>
         <strong>Birthday</strong>
       </td>
+      <td>
+        <strong>Actions</strong>
+      </td>
     </thead>
     <tbody *ngFor="let user of users">
       <tr>
         <td>{{user.name}}</td>
         <td>{{user.lastName}}</td>
         <td>{{user.birthDay}}</td>
+        <td>
+          <button type="button" class="btn btn-warning">Edit</button>
+          <button type="button" (click)="deleteUser(user.id)" class="btn btn-danger">Remove</button>
+        </td>
       </tr>
     </tbody>
   </table>
